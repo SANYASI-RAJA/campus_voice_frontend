@@ -581,7 +581,7 @@ const ShowComplaint = () => {
         let response;
         if (profile.role === "Student") {
           response = await axios.get(
-            "http://localhost:4000/api/v1/complaint/studentComplaints",
+            "https://campus-voice-backend.onrender.com/api/v1/complaint/studentComplaints",
             {
               headers: {
                 Authorization: `Bearer ${token}`,
@@ -590,7 +590,7 @@ const ShowComplaint = () => {
           );
         } else if (profile.role === "Admin") {
           response = await axios.get(
-            "http://localhost:4000/api/v1/complaint/adminComplaints",
+            "https://campus-voice-backend.onrender.com/api/v1/complaint/adminComplaints",
             {
               headers: {
                 Authorization: `Bearer ${token}`,
@@ -599,7 +599,7 @@ const ShowComplaint = () => {
           );
         } else if (profile.role === "ServiceProvider") {
           response = await axios.get(
-            "http://localhost:4000/api/v1/complaint/serviceProviderComplaints",
+            "https://campus-voice-backend.onrender.com/api/v1/complaint/serviceProviderComplaints",
             {
               headers: {
                 Authorization: `Bearer ${token}`,
@@ -641,7 +641,7 @@ const ShowComplaint = () => {
       setLoading(true)
       if (status === "Processing") {
         response = await axios.post(
-          "http://localhost:4000/api/v1/complaint/changeStatusByAdmin",
+          "https://campus-voice-backend.onrender.com/api/v1/complaint/changeStatusByAdmin",
           {
             complaintId: id,
             status: status,
@@ -654,7 +654,7 @@ const ShowComplaint = () => {
         );
       } else if (status === "Rejected") {
         response = await axios.post(
-          "http://localhost:4000/api/v1/complaint/changeStatusByAdmin",
+          "https://campus-voice-backend.onrender.com/api/v1/complaint/changeStatusByAdmin",
           {
             complaintId: id,
             status: status,
@@ -667,7 +667,7 @@ const ShowComplaint = () => {
         );
       } else if (status === "Solved") {
         response = await axios.post(
-          "http://localhost:4000/api/v1/complaint/changeStatusByServiceProvider",
+          "https://campus-voice-backend.onrender.com/api/v1/complaint/changeStatusByServiceProvider",
           {
             complaintId: id,
             status: status,
@@ -815,7 +815,7 @@ const ShowComplaint = () => {
       if (editable) {
         // formDataToSend.append("complaintId", editable._id);
         response = await axios.post(
-          "http://localhost:4000/api/v1/complaint/update",
+          "https://campus-voice-backend.onrender.com/api/v1/complaint/update",
           {
             ...values,
             complaintId: editable._id,
@@ -831,7 +831,7 @@ const ShowComplaint = () => {
         setEditable(null);
       } else {
         response = await axios.post(
-          "http://localhost:4000/api/v1/complaint/create",
+          "https://campus-voice-backend.onrender.com/api/v1/complaint/create",
           values,
           {
             headers: {
@@ -868,7 +868,7 @@ const ShowComplaint = () => {
     try {
       setLoading(true);
       const response = await axios.post(
-        "http://localhost:4000/api/v1/complaint/delete",
+        "https://campus-voice-backend.onrender.com/api/v1/complaint/delete",
         { complaintId: id },
         {
           headers: {

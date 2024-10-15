@@ -30,7 +30,7 @@ const SignUp = () => {
     try {
       setLoading(true);
       const response = await axios.post(
-        "http://localhost:4000/api/v1/auth/signup",
+        "https://campus-voice-backend.onrender.com/api/v1/auth/signup",
         formData
       );
       setLoading(false);

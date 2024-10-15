@@ -43,7 +43,7 @@ const ViewProfile = ({ profileDetails, token }) => {
       formData.append("image", image);
       
       const response = await axios.post(
-        "http://localhost:4000/api/v1/auth/profileupdate",
+        "https://campus-voice-backend.onrender.com/api/v1/auth/profileupdate",
         formData,
         {
           headers: {
@@ -78,7 +78,7 @@ const ViewProfile = ({ profileDetails, token }) => {
     try {
       setLoading(true)
       const response = await axios.post(
-        "http://localhost:4000/api/v1/auth/profileupdate",
+        "https://campus-voice-backend.onrender.com/api/v1/auth/profileupdate",
         formData,
         {
           headers: {

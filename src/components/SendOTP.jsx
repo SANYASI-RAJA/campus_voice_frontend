@@ -22,7 +22,7 @@ const SendOTP = () => {
     try {
       setLoading(true);
       const response = await axios.post(
-        "http://localhost:4000/api/v1/auth/sendotp",
+        "https://campus-voice-backend.onrender.com/api/v1/auth/sendotp",
         { email }
       );
       setLoading(false);

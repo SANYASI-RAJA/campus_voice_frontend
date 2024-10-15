@@ -208,7 +208,7 @@ const Navbar = ({ setToken, setProfileDetails }) => {
     const handleUserDetails = async () => {
       if (profile.id && profile.role) {
         const response = await axios.post(
-          "http://localhost:4000/api/v1/auth/userdetails",
+          "https://campus-voice-backend.onrender.com/api/v1/auth/userdetails",
           { id: profile.id, role: profile.role }
         );
 

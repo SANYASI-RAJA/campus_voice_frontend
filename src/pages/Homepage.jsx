@@ -124,7 +124,7 @@ const Homepage = ({ token, profileDetails }) => {
     const fetchedComplaints = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:4000/api/v1/complaint/getAllComplaints"
+          "https://campus-voice-backend.onrender.com/api/v1/complaint/getAllComplaints"
         );
 
         if (response && response.data) {

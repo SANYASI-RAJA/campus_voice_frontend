@@ -169,7 +169,7 @@ const SignUp = ({ token }) => {
     try {
       setLoading(true);
       const response = await axios.post(
-        "http://localhost:4000/api/v1/auth/addnewuser",
+        "https://campus-voice-backend.onrender.com/api/v1/auth/addnewuser",
         formData,
         {
           headers: {

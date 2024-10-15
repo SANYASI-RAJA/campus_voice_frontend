@@ -19,7 +19,7 @@ const ContactUs = () => {
     e.preventDefault();
     // Here you can implement your logic for sending the form data
     console.log(formData);
-    const response = await axios.post("http://localhost:4000/api/v1/contact/contactus",formData)
+    const response = await axios.post("https://campus-voice-backend.onrender.com/api/v1/contact/contactus",formData)
     // Reset form fields after submission
     setFormData({
       name: '',
