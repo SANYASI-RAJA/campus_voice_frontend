@@ -196,7 +196,7 @@ const SignUp = ({ token }) => {
     <div className="max-w-md mx-auto m-8">
       <h2 className="text-2xl font-bold mb-4">Add New User</h2>
       <form onSubmit={handleSubmit}>
-        <div className="mb-4">
+        <div className="mb-4 ">
           <input
             type="text"
             name="name"

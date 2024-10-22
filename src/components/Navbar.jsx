@@ -261,152 +261,162 @@ const Navbar = ({ setToken, setProfileDetails }) => {
   };
   return (
     <div>
-      <nav className="w-full flex flex-row items-center h-5 px-4 py-10 lg:px-14">
-        <div className="lg:hidden text-3xl mr-5" id="menu">
-          <button onClick={toggleMenu}>
-            <IoIosMenu />{" "}
-          </button>
-        </div>
+  <nav className="w-full flex flex-row items-center h-5 px-4 py-10 lg:px-14">
+    {/* Mobile Menu Button */}
+    <div className="lg:hidden text-3xl mr-5" id="menu">
+      <button onClick={toggleMenu}>
+        <IoIosMenu />{" "}
+      </button>
+    </div>
 
-        <NavLink to="/" className="text-4xl font-bold text-lime-600 mr-10 logo">
-          CampusVoice
-        </NavLink>
+    {/* Logo */}
+    <NavLink to="/" className="text-4xl font-bold text-lime-600 mr-10 logo">
+      CampusVoice
+    </NavLink>
 
-        <div className="flex flex-row items-center justify-between">
-          <div
-            className={`flex flex-row text-black text-xl font-bold links md:hidden lg:flex lg:gap-4 lg:items-center`}
-          >
-            <Link to="/">Home</Link>
-            {isLoggedIn && profile.role === "Student" && (
-              <Link to="/contactus">ContactUs</Link>
-            )}
-            {isLoggedIn && (
-              <Link to="/showComplaints">
-                {profile.role !== "Admin" ? "Complaint" : "Dashboard"}
-              </Link>
-            )}
-            {!isLoggedIn && (
-              <Link
-                className="bg-blue-700 p-2 text-[16px] text-white font-bold rounded-md w-24 text-center"
-                to="/sendotp"
-              >
-                Sign Up
-              </Link>
-            )}
-            {!isLoggedIn && (
-              <Link
-                className="bg-blue-700 p-2 text-[16px] text-white font-bold rounded-md w-24 text-center"
-                to="/login"
-              >
-                Login
-              </Link>
-            )}
-            {/* {isLoggedIn && <button onClick={handleLogout}>Logout</button>} */}
-          </div>
-
-          {isLoggedIn && (
-            <div className="w-[50px] h-[50px] absolute right-5 md:absolute md:right-6 lg:absolute lg:right-16">
-              <img
-                className="w-full h-full rounded-full border-2 border-solid border-black cursor-pointer"
-                src={userDetails.image}
-                onClick={() => toggleProfile()}
-                id="profile"
-              />
-            </div>
-          )}
-        </div>
-      </nav>
-      {showMenu && (
-        <div
-          className="absolute top-20 left-5 w-40 md:w-56 md:h-40 flex-1 bg-gray-400 rounded-md p-4 z-10 flex flex-col gap-5 lg:hidden "
-          id="menuOptions"
-        >
-          <Link to="/">Home</Link>
-          {isLoggedIn && profile.role === "Student" && (
-            <Link to="/contactus">ContactUs</Link>
-          )}
-          {isLoggedIn && (
-            <Link to="/showComplaints">
-              {profile.role !== "Admin" ? "Complaint" : "Dashboard"}
-            </Link>
-          )}
-          <div className="flex flex-col gap-3 md:justify-around">
-            {!isLoggedIn && (
-              <Link
-                className="bg-blue-700 p-2 text-[16px] text-white font-bold rounded-md w-24 text-center"
-                to="/sendotp"
-              >
-                Sign Up
-              </Link>
-            )}
-            {!isLoggedIn && (
-              <Link
-                className="bg-blue-700 p-2 text-[16px] text-white font-bold rounded-md w-24 text-center"
-                to="/login"
-              >
-                Login
-              </Link>
-            )}
-            {isLoggedIn && (
-              <button
-                className="bg-blue-700 p-2 text-center text-[16px] text-white font-bold rounded-md w-24"
-                onClick={handleLogout}
-              >
-                Logout
-              </button>
-            )}
-          </div>
-        </div>
+    {/* Left Side Links */}
+    <div className="flex flex-row items-center text-purple-500 text-xl font-bold mr-auto">
+      <Link
+        className="bg-blue-700 p-2 text-[16px] text-white font-bold rounded-md w-24 text-center"
+        to="/"
+      >
+        Home
+      </Link>
+      {isLoggedIn && profile.role === "Student" && (
+        <Link to="/contactus" className="ml-4">Contact Us</Link>
       )}
+      {isLoggedIn && (
+        <Link to="/showComplaints" className="ml-4">
+          {profile.role !== "Admin" ? "Complaint" : "Dashboard"}
+        </Link>
+      )}
+    </div>
 
-      {showProfile && (
-        <div
-          className="absolute right-8 w-[270px] h-[190px] bg-zinc-200 z-10 flex flex-col items-start p-3 gap-5 rounded-md"
-          id="profileOptions"
-          style={{height: 'auto'}}
+    {/* Right Side Buttons */}
+    <div className="flex flex-row items-center">
+      {!isLoggedIn && (
+        <Link
+          className="bg-blue-700 p-2 text-[16px] text-white font-bold rounded-md w-24 text-center mr-4"
+          to="/sendotp"
         >
-          <div className="flex flex-row gap-3 items-center">
-            <img
-              className="w-[50px] h-[50px] rounded-full"
-              src={userDetails.image}
-              alt=""
-            />
-            <h1 className="text-[20px] font-bold">{userDetails.name}</h1>
-          </div>
-
-          <div className="flex flex-col gap-3">
-            <Link
-              to={{ pathname: "/viewprofile", state: { data: userDetails } }}
-            >
-              <div className="flex flex-row items-center justify-between">
-                <div className="flex gap-4">
-                  <FaUser className="w-[20px] h-[20px] rounded-full" />
-                  <p>Edit Profile</p>
-                </div>
-                {/* <FaGreaterThan /> */}
-              </div>
-            </Link>
-            {userDetails.role === "Admin" && <Link to={{pathname: "/addnewuser", state:{data:token1}}}>
-              <div className="flex flex-row items-center justify-between">
-                <div className="flex gap-4">
-                  <TiUserAdd className="w-[20px] h-[20px] rounded-full" />
-                  <p>Add New User</p>
-                </div>
-                {/* <FaGreaterThan /> */}
-              </div>
-            </Link>}
-          </div>
-          {isLoggedIn && (
-            <button
-              className="bg-blue-700 p-2 text-[16px] text-white font-bold rounded-md w-24 text-center"
-              onClick={handleLogout}
-            >
-              Logout
-            </button>
-          )}
+          Sign Up
+        </Link>
+      )}
+      {!isLoggedIn && (
+        <Link
+          className="bg-blue-700 p-2 text-[16px] text-white font-bold rounded-md w-24 text-center mr-4"
+          to="/login"
+        >
+          Login
+        </Link>
+      )}
+      {isLoggedIn && (
+        <div className="w-[50px] h-[50px] relative">
+          <img
+            className="w-full h-full rounded-full border-2 border-solid border-black cursor-pointer"
+            src={userDetails.image}
+            onClick={() => toggleProfile()}
+            id="profile"
+          />
         </div>
       )}
     </div>
+  </nav>
+
+  {/* Mobile Menu Options */}
+  {showMenu && (
+    <div
+      className="absolute top-20 left-5 w-40 md:w-56 md:h-40 flex-1 bg-gray-400 rounded-md p-4 z-10 flex flex-col gap-5 lg:hidden"
+      id="menuOptions"
+    >
+      <Link to="/">Home</Link>
+      {isLoggedIn && profile.role === "Student" && (
+        <Link to="/contactus">Contact Us</Link>
+      )}
+      {isLoggedIn && (
+        <Link to="/showComplaints">
+          {profile.role !== "Admin" ? "Complaint" : "Dashboard"}
+        </Link>
+      )}
+      <div className="flex flex-col gap-3 md:justify-around">
+        {!isLoggedIn && (
+          <Link
+            className="bg-blue-700 p-2 text-[16px] text-white font-bold rounded-md w-24 text-center"
+            to="/sendotp"
+          >
+            Sign Up
+          </Link>
+        )}
+        {!isLoggedIn && (
+          <Link
+            className="bg-blue-700 p-2 text-[16px] text-white font-bold rounded-md w-24 text-center"
+            to="/login"
+          >
+            Login
+          </Link>
+        )}
+        {isLoggedIn && (
+          <button
+            className="bg-blue-700 p-2 text-center text-[16px] text-white font-bold rounded-md w-24"
+            onClick={handleLogout}
+          >
+            Logout
+          </button>
+        )}
+      </div>
+    </div>
+  )}
+
+  {/* Profile Options */}
+  {showProfile && (
+    <div
+      className="absolute right-8 w-[270px] h-[190px] bg-zinc-200 z-10 flex flex-col items-start p-3 gap-5 rounded-md"
+      id="profileOptions"
+      style={{ height: "auto" }}
+    >
+      <div className="flex flex-row gap-3 items-center">
+        <img
+          className="w-[50px] h-[50px] rounded-full"
+          src={userDetails.image}
+          alt=""
+        />
+        <h1 className="text-[20px] font-bold">{userDetails.name}</h1>
+      </div>
+
+      <div className="flex flex-col gap-3">
+        <Link
+          to={{ pathname: "/viewprofile", state: { data: userDetails } }}
+        >
+          <div className="flex flex-row items-center justify-between">
+            <div className="flex gap-4">
+              <FaUser className="w-[20px] h-[20px] rounded-full" />
+              <p>Edit Profile</p>
+            </div>
+          </div>
+        </Link>
+        {userDetails.role === "Admin" && (
+          <Link to={{ pathname: "/addnewuser", state: { data: token1 } }}>
+            <div className="flex flex-row items-center justify-between">
+              <div className="flex gap-4">
+                <TiUserAdd className="w-[20px] h-[20px] rounded-full" />
+                <p>Add New User</p>
+              </div>
+            </div>
+          </Link>
+        )}
+      </div>
+      {isLoggedIn && (
+        <button
+          className="bg-blue-700 p-2 text-[16px] text-white font-bold rounded-md w-24 text-center"
+          onClick={handleLogout}
+        >
+          Logout
+        </button>
+      )}
+    </div>
+  )}
+</div>
+
   );
 };
 

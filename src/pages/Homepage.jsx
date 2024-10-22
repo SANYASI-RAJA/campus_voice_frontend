@@ -161,10 +161,10 @@ const Homepage = ({ token, profileDetails }) => {
               </Link>}
             </div>
 
-            <div className="text-4xl font-momo font-bold mt-4 w-full md:w-[50%] md:text-[56px] md:leading-[60px]">
+            <div className="text-teal-500 text-4xl font-momo font-bold mt-4 w-full md:w-[50%] md:text-[56px] md:leading-[60px]">
               Welcome to Campus Voice
             </div>
-            <div className="mt-4 sm:text-gray-800 w-[96%] md:text-[24px] md:font-semibold">
+            <div className=" mt-4 sm:text-slate-600 w-[96%] md:text-[24px] md:font-semibold">
               Your comprehensive college complaint management system. Create an
               account to start managing your complaints or log in to view your
               dashboard.
@@ -199,7 +199,7 @@ const Homepage = ({ token, profileDetails }) => {
       {/* Section2 */}
       <div className="flex flex-col my-4 items-center lg:w-11/12">
         {/* <div className="text-3xl font-bold">Impact at a Glance</div> */}
-        <div className="text-3xl font-bold md:text-6xl">Our Impact</div>
+        <div className="text-teal-500 text-3xl font-bold md:text-6xl">Our Impact</div>
         <div className="text-[16px] px-4 text-center text-gray-500 w-full mt-3 md:text-[24px] md:font-semibold">
           Transparently resolving student issues for a more conducive
           educational environment. Take a look at how we make a difference.
@@ -220,7 +220,7 @@ const Homepage = ({ token, profileDetails }) => {
       <div className="bg-gray-900 rounded-sm text-white flex flex-col gap-4 justify-center mt-5 mb-10 p-5 items-center lg:flex lg:flex-row lg:w-11/12">
         <div className="flex flex-col gap-4">
           <div className="flex flex-col gap-3 items-left">
-            <div className="text-4xl font-bold text-gray-200 md:text-5xl">
+            <div className="text-4xl font-bold text-teal-500 md:text-5xl">
               System Features
             </div>
             <p className="w-[98%] text-gray-300 md:text-[24px]">
@@ -241,7 +241,7 @@ const Homepage = ({ token, profileDetails }) => {
                 <IoBagSharp />
               </p>
               <div>
-                <p className="font-semibold">Easy Tracking</p>
+                <p className="text-fuchsia-300 font-semibold">Easy Tracking</p>
                 <p className="text-[14px]">
                   Stay updated with real-time status changes on all your
                   complaints, ensuring you're always in the loop.
@@ -253,7 +253,7 @@ const Homepage = ({ token, profileDetails }) => {
                 <IoMdMail />
               </p>
               <div>
-                <p className="font-semibold">Secure Login</p>
+                <p className="text-fuchsia-300 font-semibold">Secure Login</p>
                 <p className="text-[14px]">
                   Protect your privacy with our secure sign-up and login system,
                   keeping all your personal information safe.
@@ -265,7 +265,7 @@ const Homepage = ({ token, profileDetails }) => {
                 <FaBell />
               </p>
               <div>
-                <p className="font-semibold">Admin Control</p>
+                <p className="text-fuchsia-300 font-semibold">Admin Control</p>
                 <p className="text-[14px]">
                   Full administrative functionality to oversee complaint status,
                   student information, and manage service providers.
@@ -284,7 +284,7 @@ const Homepage = ({ token, profileDetails }) => {
       <div className="bg-gray-900 rounded-sm text-white flex flex-col gap-4 justify-center mt-5 mb-10 p-5 items-center lg:flex lg:items-start lg:w-11/12">
         <div className="flex flex-col gap-4 lg:flex lg:flex-row">
           <div className="flex flex-col gap-3">
-            <div className="text-4xl font-bold text-gray-200 md:text-5xl">
+            <div className="text-4xl font-bold text-teal-500 md:text-5xl">
               Key Features
             </div>
             <p className="w-[98%] text-gray-300 md:text-[24px]">
@@ -306,7 +306,7 @@ const Homepage = ({ token, profileDetails }) => {
                 <FaFireFlameCurved />
               </p>
               <div>
-                <p className="font-semibold">User Reports</p>
+                <p className="text-fuchsia-300 font-semibold">User Reports</p>
                 <p className="text-[14px]">
                   Create a detailed complaint with our user-friendly reporting
                   tools and track its progress towards resolution.
@@ -318,7 +318,7 @@ const Homepage = ({ token, profileDetails }) => {
                 <MdWatchLater />
               </p>
               <div>
-                <p className="font-semibold">Admin Insight</p>
+                <p className="text-fuchsia-300 font-semibold">Admin Insight</p>
                 <p className="text-[14px]">
                   Admin Insight Administrators can easily access student info,
                   update complaint statuses, and add service providers within
@@ -331,7 +331,7 @@ const Homepage = ({ token, profileDetails }) => {
                 <BsCloudyFill />
               </p>
               <div>
-                <p className="font-semibold">Provider Access</p>
+                <p className="text-fuchsia-300 font-semibold">Provider Access</p>
                 <p className="text-[14px]">
                   Service providers have targeted access to complaints relevant
                   to their services, allowing for efficient resolution.
@@ -344,30 +344,30 @@ const Homepage = ({ token, profileDetails }) => {
 
       {/* Section5 */}
       <div className="flex flex-col justify-center items-start p-5 gap-3 lg:w-11/12">
-        <div className="text-black text-4xl font-extrabold md:text-6xl">
+        <div className="text-teal-500 text-4xl font-extrabold md:text-6xl">
           FAQs
         </div>
-        <p className=" md:text-[24px]">
+        <p className="text-slate-800 md:text-[24px]">
           Get your questions answered right from the get-go and understand how
           our system can work for you.
         </p>
         <div className="flex flex-col gap-5  lg:flex lg:flex-row lg:gap-8 lg:w[50%]">
           <div className="flex flex-col gap-4  lg:w-[70%]">
             <div className="flex flex-col">
-              <p className="font-semibold text-[18px]  md:text-[24px]">
+              <p className="text-sky-600 font-semibold text-[18px]  md:text-[24px]">
                 How do I report a new complaint?{" "}
               </p>
-              <p className=" md:text-[22px]">
+              <p className="text-stone-600 md:text-[22px]">
                 Simply log in to your account, navigate to the complaint
                 section, and fill out the complaint submission form.
               </p>
             </div>
 
             <div>
-              <p className="font-semibold text-[18px]  md:text-[24px]">
+              <p className="text-sky-600 font-semibold text-[18px]  md:text-[24px]">
                 Can I track the status of my complaint?{" "}
               </p>
-              <p className=" md:text-[22px]">
+              <p className="text-stone-600 md:text-[22px]">
                 Yes, once logged in, you'll find an up-to-date status of each
                 complaint you've submitted in your dashboard.
               </p>
@@ -375,20 +375,20 @@ const Homepage = ({ token, profileDetails }) => {
           </div>
           <div className="flex flex-col gap-4 lg:w-[70%]">
             <div className="flex flex-col">
-              <p className="font-semibold text-[18px]  md:text-[24px]">
+              <p className=" text-sky-600 font-semibold text-[18px]  md:text-[24px]">
                 What is the response time for a complaint?{" "}
               </p>
-              <p className=" md:text-[22px]">
+              <p className="text-stone-600 md:text-[22px]">
                 Typical response times vary, but service providers aim to
                 address complaints within 72 hours.
               </p>
             </div>
 
             <div>
-              <p className="font-semibold text-[18px]  md:text-[24px]">
+              <p className="text-sky-600 font-semibold text-[18px]  md:text-[24px]">
                 Who can access my complaints?{" "}
               </p>
-              <p className=" md:text-[22px]">
+              <p className="text-stone-600 md:text-[22px]">
                 Only relevant administrators and service providers assigned to
                 your complaint can view the details for resolution.
               </p>
