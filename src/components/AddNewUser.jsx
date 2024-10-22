@@ -194,7 +194,10 @@ const SignUp = ({ token }) => {
 
   return (
     <div className="max-w-md mx-auto m-8 p-6 bg-gradient-to-b from-black via-gray-800 to-black rounded-lg shadow-lg">
-  <h2 className="text-3xl font-semibold text-center text-white mb-6">Add New User</h2>
+    <div className="b">
+      <h2 className="text-3xl font-semibold text-center text-white mb-6">Add New User</h2>
+    </div>
+  
   <form onSubmit={handleSubmit}>
     <div className="mb-4">
       <input

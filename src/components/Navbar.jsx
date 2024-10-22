@@ -269,7 +269,7 @@ const Navbar = ({ setToken, setProfileDetails }) => {
     </div>
 
     <NavLink to="/" className="text-4xl font-bold text-lime-600 mr-10 logo">
-      CampusVoice
+      Campus Voice
     </NavLink>
 
     <div className="flex flex-row items-center text-purple-500 text-xl font-bold mr-auto">

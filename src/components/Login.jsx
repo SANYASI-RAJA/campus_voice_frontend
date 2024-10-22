@@ -47,8 +47,8 @@ const Login = () => {
   return (
     <div className="w-full h-screen flex flex-col items-center gap-10 lg:flex-row lg:px-16 lg:justify-between">
       <img src={loginImg} alt="" className="rounded-md w-56 md:w-[60%] lg:w-[40%]" />
-      <div className="border-2 border-gray-400 border-solid p-4 w-[80%] md:w-[70%] lg:w-[40%] shadow-lg shadow-gray-600">
-        <h2 className="text-4xl mb-5">Login Form</h2>
+      <div className="bg-stone-100 border-x-1 border-y-1 border-s-4 border-teal-400 border-solid p-4 w-[80%] md:w-[70%] lg:w-[40%] shadow-lg shadow-gray-600">
+        <h2 className="text-lime-600 font-semibold text-4xl mb-4">Login Form</h2>
         <form className="flex flex-col gap-5" onSubmit={submitHandle}>
           <input
             className="p-[10px] mt-[10px] rounded-md border border-[#ccc] border-solid"
