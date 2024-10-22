@@ -193,7 +193,7 @@ const SignUp = ({ token }) => {
   };
 
   return (
-    <div className="bg-black p-8 rounded-lg shadow-lg max-w-md mx-auto">
+    <div className="bg-black p-8 max-w-md mx-auto">
   <h2 className="text-2xl font-bold text-white mb-4">Add New User</h2>
   <form onSubmit={handleSubmit}>
     <div className="mb-4">
@@ -203,7 +203,7 @@ const SignUp = ({ token }) => {
         value={formData.name}
         onChange={handleChange}
         placeholder="Name"
-        className="input bg-gray-800 text-white placeholder-gray-400 border border-gray-600 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 rounded-md p-2"
+        className="input"
         required
       />
     </div>
@@ -214,7 +214,7 @@ const SignUp = ({ token }) => {
         value={formData.email}
         onChange={handleChange}
         placeholder="Email"
-        className="input bg-gray-800 text-white placeholder-gray-400 border border-gray-600 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 rounded-md p-2"
+        className="input"
         required
       />
     </div>
@@ -225,7 +225,7 @@ const SignUp = ({ token }) => {
         value={formData.contactNumber}
         onChange={handleChange}
         placeholder="Contact Number"
-        className="input bg-gray-800 text-white placeholder-gray-400 border border-gray-600 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 rounded-md p-2"
+        className="input"
         required
       />
     </div>
@@ -236,7 +236,7 @@ const SignUp = ({ token }) => {
         value={formData.password}
         onChange={handleChange}
         placeholder="Password"
-        className="input bg-gray-800 text-white placeholder-gray-400 border border-gray-600 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 rounded-md p-2"
+        className="input"
         required
       />
     </div>
@@ -247,7 +247,7 @@ const SignUp = ({ token }) => {
         value={formData.confirmPassword}
         onChange={handleChange}
         placeholder="Confirm Password"
-        className="input bg-gray-800 text-white placeholder-gray-400 border border-gray-600 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 rounded-md p-2"
+        className="input"
         required
       />
     </div>
@@ -256,7 +256,7 @@ const SignUp = ({ token }) => {
         name="role"
         value={formData.role}
         onChange={handleChange}
-        className="input bg-gray-800 text-white placeholder-gray-400 border border-gray-600 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 rounded-md p-2"
+        className="input"
         required
       >
         <option value="">Select Role</option>
@@ -270,7 +270,7 @@ const SignUp = ({ token }) => {
           name="serviceProviderRole"
           onChange={handleChange}
           value={formData.serviceProviderRole}
-          className="input bg-gray-800 text-white placeholder-gray-400 border border-gray-600 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 rounded-md p-2"
+          className="input"
         >
           <option>Select Service Provider Role</option>
           <option value="Maintenance">Maintenance</option>
