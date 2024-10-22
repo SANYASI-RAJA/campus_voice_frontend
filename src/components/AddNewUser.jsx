@@ -193,8 +193,8 @@ const SignUp = ({ token }) => {
   };
 
   return (
-    <div className="bg-black p-8 max-w-md mx-auto">
-  <h2 className="text-2xl font-bold text-white mb-4">Add New User</h2>
+    <div className="max-w-md mx-auto m-8 p-6 bg-black rounded-lg shadow-lg">
+  <h2 className="text-3xl font-semibold text-center mb-6">Add New User</h2>
   <form onSubmit={handleSubmit}>
     <div className="mb-4">
       <input
@@ -202,8 +202,8 @@ const SignUp = ({ token }) => {
         name="name"
         value={formData.name}
         onChange={handleChange}
-        placeholder="Name"
-        className="input"
+        placeholder="Full Name"
+        className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
         required
       />
     </div>
@@ -213,8 +213,8 @@ const SignUp = ({ token }) => {
         name="email"
         value={formData.email}
         onChange={handleChange}
-        placeholder="Email"
-        className="input"
+        placeholder="Email Address"
+        className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
         required
       />
     </div>
@@ -225,7 +225,7 @@ const SignUp = ({ token }) => {
         value={formData.contactNumber}
         onChange={handleChange}
         placeholder="Contact Number"
-        className="input"
+        className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
         required
       />
     </div>
@@ -236,7 +236,7 @@ const SignUp = ({ token }) => {
         value={formData.password}
         onChange={handleChange}
         placeholder="Password"
-        className="input"
+        className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
         required
       />
     </div>
@@ -247,7 +247,7 @@ const SignUp = ({ token }) => {
         value={formData.confirmPassword}
         onChange={handleChange}
         placeholder="Confirm Password"
-        className="input"
+        className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
         required
       />
     </div>
@@ -256,10 +256,10 @@ const SignUp = ({ token }) => {
         name="role"
         value={formData.role}
         onChange={handleChange}
-        className="input"
+        className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
         required
       >
-        <option value="">Select Role</option>
+        <option value="" disabled>Select Role</option>
         <option value="Admin">Admin</option>
         <option value="ServiceProvider">Service Provider</option>
       </select>
@@ -270,19 +270,19 @@ const SignUp = ({ token }) => {
           name="serviceProviderRole"
           onChange={handleChange}
           value={formData.serviceProviderRole}
-          className="input"
+          className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
         >
-          <option>Select Service Provider Role</option>
+          <option value="" disabled>Select Service Provider Role</option>
           <option value="Maintenance">Maintenance</option>
           <option value="Safety and Security">Safety and Security</option>
           <option value="Food">Food</option>
         </select>
       </div>
     )}
-    <div className="mb-4">
+    <div className="mb-6">
       <button
         type="submit"
-        className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
+        className="w-full bg-blue-500 text-white py-3 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-200"
       >
         {loading ? "Adding..." : "Add New User"}
       </button>
