@@ -262,19 +262,16 @@ const Navbar = ({ setToken, setProfileDetails }) => {
   return (
     <div>
   <nav className="w-full flex flex-row items-center h-5 px-4 py-10 lg:px-14">
-    {/* Mobile Menu Button */}
     <div className="lg:hidden text-3xl mr-5" id="menu">
       <button onClick={toggleMenu}>
         <IoIosMenu />{" "}
       </button>
     </div>
 
-    {/* Logo */}
     <NavLink to="/" className="text-4xl font-bold text-lime-600 mr-10 logo">
       CampusVoice
     </NavLink>
 
-    {/* Left Side Links */}
     <div className="flex flex-row items-center text-purple-500 text-xl font-bold mr-auto">
       <Link
         className="bg-blue-700 p-2 text-[16px] text-white font-bold rounded-md w-24 text-center"
@@ -283,16 +280,17 @@ const Navbar = ({ setToken, setProfileDetails }) => {
         Home
       </Link>
       {isLoggedIn && profile.role === "Student" && (
-        <Link to="/contactus" className="ml-4">Contact Us</Link>
+        <Link to="/contactus" className="ml-4 bg-blue-700 p-2 text-[16px] text-white font-bold rounded-md w-24 text-center">
+          Contact Us
+        </Link>
       )}
       {isLoggedIn && (
-        <Link to="/showComplaints" className="ml-4">
+        <Link to="/showComplaints" className="ml-4 bg-blue-700 p-2 text-[16px] text-white font-bold rounded-md w-24 text-center">
           {profile.role !== "Admin" ? "Complaint" : "Dashboard"}
         </Link>
       )}
     </div>
 
-    {/* Right Side Buttons */}
     <div className="flex flex-row items-center">
       {!isLoggedIn && (
         <Link
@@ -323,18 +321,21 @@ const Navbar = ({ setToken, setProfileDetails }) => {
     </div>
   </nav>
 
-  {/* Mobile Menu Options */}
   {showMenu && (
     <div
       className="absolute top-20 left-5 w-40 md:w-56 md:h-40 flex-1 bg-gray-400 rounded-md p-4 z-10 flex flex-col gap-5 lg:hidden"
       id="menuOptions"
     >
-      <Link to="/">Home</Link>
+      <Link to="/" className="bg-blue-700 p-2 text-[16px] text-white font-bold rounded-md w-24 text-center">
+        Home
+      </Link>
       {isLoggedIn && profile.role === "Student" && (
-        <Link to="/contactus">Contact Us</Link>
+        <Link to="/contactus" className="bg-blue-700 p-2 text-[16px] text-white font-bold rounded-md w-24 text-center">
+          Contact Us
+        </Link>
       )}
       {isLoggedIn && (
-        <Link to="/showComplaints">
+        <Link to="/showComplaints" className="bg-blue-700 p-2 text-[16px] text-white font-bold rounded-md w-24 text-center">
           {profile.role !== "Admin" ? "Complaint" : "Dashboard"}
         </Link>
       )}
@@ -357,7 +358,7 @@ const Navbar = ({ setToken, setProfileDetails }) => {
         )}
         {isLoggedIn && (
           <button
-            className="bg-blue-700 p-2 text-center text-[16px] text-white font-bold rounded-md w-24"
+            className="bg-blue-700 p-2 text-[16px] text-white font-bold rounded-md w-24 text-center"
             onClick={handleLogout}
           >
             Logout
@@ -367,7 +368,6 @@ const Navbar = ({ setToken, setProfileDetails }) => {
     </div>
   )}
 
-  {/* Profile Options */}
   {showProfile && (
     <div
       className="absolute right-8 w-[270px] h-[190px] bg-zinc-200 z-10 flex flex-col items-start p-3 gap-5 rounded-md"
@@ -416,6 +416,7 @@ const Navbar = ({ setToken, setProfileDetails }) => {
     </div>
   )}
 </div>
+
 
   );
 };
