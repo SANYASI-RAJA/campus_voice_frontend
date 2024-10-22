@@ -57,8 +57,8 @@ const SignUp = () => {
       <div className="absolute top-5 left-[700px]">{loading && <Spin />}</div>
 
       <img className="w-56 h-56 md:w-96 md:h-96" src={singupImg} alt="" />
-      <div className="max-w-md bg-white rounded-lg overflow-hidden shadow-2xl p-6 w-[90%]">
-        <h2 className="text-2xl font-semibold mb-4 md:text-3xl md:font-bold">Signup</h2>
+      <div className="max-w-md bg-stone-100 border-s-4 border-fuchsia-400 rounded-lg overflow-hidden shadow-2xl p-6 w-[90%]">
+        <h2 className="text-2xl font-semibold mb-4 text-lime-600 md:text-3xl md:font-bold">Sign Up</h2>
         <form className="flex flex-col" onSubmit={handleSubmit}>
           {/* Add input fields for name, email, password, role, etc. */}
           <input

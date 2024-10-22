@@ -193,9 +193,9 @@ const SignUp = ({ token }) => {
   };
 
   return (
-    <div className="max-w-md mx-auto m-8 p-6 bg-gradient-to-b from-black via-gray-800 to-black rounded-lg shadow-lg">
+    <div className="max-w-md mx-auto m-8 p-6 bg-slate-100 rounded-lg shadow-lg">
     <div className="b">
-      <h2 className="text-3xl font-semibold text-center text-white mb-6">Add New User</h2>
+      <h2 className="text-3xl font-semibold text-center text-lime-600 mb-6">Add New User</h2>
     </div>
   
   <form onSubmit={handleSubmit}>
@@ -259,7 +259,7 @@ const SignUp = ({ token }) => {
         name="role"
         value={formData.role}
         onChange={handleChange}
-        className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+        className="w-full p-3 border border-gray-300 text-slate-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
         required
       >
         <option value="" disabled>Select Role</option>
@@ -273,7 +273,7 @@ const SignUp = ({ token }) => {
           name="serviceProviderRole"
           onChange={handleChange}
           value={formData.serviceProviderRole}
-          className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+          className="w-full p-3 border border-gray-300 text-slate-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
         >
           <option value="" disabled>Select Service Provider Role</option>
           <option value="Maintenance">Maintenance</option>
