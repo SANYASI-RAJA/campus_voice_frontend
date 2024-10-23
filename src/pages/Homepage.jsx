@@ -164,7 +164,7 @@ const Homepage = ({ token, profileDetails }) => {
             <div className="text-teal-500 text-4xl font-momo font-bold mt-4 w-full md:w-[50%] md:text-[56px] md:leading-[60px]">
               Welcome to Campus Voice
             </div>
-            <div className=" mt-4 sm:text-slate-600 w-[96%] md:text-[24px] md:font-semibold">
+            <div className=" mt-4 sm:text-slate-500 w-[96%] md:text-[24px] md:font-semibold">
               Your comprehensive college complaint management system. Create an
               account to start managing your complaints or log in to view your
               dashboard.
@@ -197,15 +197,15 @@ const Homepage = ({ token, profileDetails }) => {
       </div>
 
       {/* Section2 */}
-      <div className="flex flex-col my-4 items-center lg:w-11/12">
+      <div className="flex flex-col bg-stone-700 p-4 my-4 items-center lg:w-11/12">
         {/* <div className="text-3xl font-bold">Impact at a Glance</div> */}
         <div className="text-teal-500 text-3xl font-bold md:text-6xl">Our Impact</div>
-        <div className="text-[16px] px-4 text-center text-gray-500 w-full mt-3 md:text-[24px] md:font-semibold">
+        <div className="text-[16px] px-4 text-center text-stone-200 w-full mt-3 md:text-[24px] md:font-semibold">
           Transparently resolving student issues for a more conducive
           educational environment. Take a look at how we make a difference.
         </div>
 
-        <div className="flex flex-col rounded-md gap-7 mt-6 md:flex-row lg:flex lg:gap-36">
+        <div className="flex flex-col rounded-md gap-7 text-stone-200 mt-6 md:flex-row lg:flex lg:gap-36">
           <Card value={`${19}`} text={"Complaints"} tag={"plus"} />
           <Card value={`${10}`} text={"Solved"} tag={"plus"} />
           <Card
@@ -217,13 +217,13 @@ const Homepage = ({ token, profileDetails }) => {
       </div>
 
       {/* Section3 */}
-      <div className="bg-gray-900 rounded-sm text-white flex flex-col gap-4 justify-center mt-5 mb-10 p-5 items-center lg:flex lg:flex-row lg:w-11/12">
+      <div className="bg-white-500 rounded-sm text-white flex flex-col gap-4 justify-center mt-5 mb-10 p-5 items-center lg:flex lg:flex-row lg:w-11/12">
         <div className="flex flex-col gap-4">
           <div className="flex flex-col gap-3 items-left">
             <div className="text-4xl font-bold text-teal-500 md:text-5xl">
               System Features
             </div>
-            <p className="w-[98%] text-gray-300 md:text-[24px]">
+            <p className="w-[98%] text-slate-600 md:text-[24px]">
               We prioritize user experience by providing easy navigation,
               efficient tracking, and secure complaint management.
             </p>
@@ -241,20 +241,20 @@ const Homepage = ({ token, profileDetails }) => {
                 <IoBagSharp />
               </p>
               <div>
-                <p className="text-fuchsia-300 font-semibold">Easy Tracking</p>
-                <p className="text-[14px]">
+                <p className="text-fuchsia-500 font-semibold">Easy Tracking</p>
+                <p className="text-[14px] text-slate-600 ">
                   Stay updated with real-time status changes on all your
                   complaints, ensuring you're always in the loop.
                 </p>
               </div>
             </div>
             <div className="flex gap-4 items-baseline">
-              <p>
+              <p className="fill-red">
                 <IoMdMail />
               </p>
               <div>
-                <p className="text-fuchsia-300 font-semibold">Secure Login</p>
-                <p className="text-[14px]">
+                <p className="text-fuchsia-500 font-semibold">Secure Login</p>
+                <p className="text-[14px] text-slate-600">
                   Protect your privacy with our secure sign-up and login system,
                   keeping all your personal information safe.
                 </p>
@@ -265,8 +265,8 @@ const Homepage = ({ token, profileDetails }) => {
                 <FaBell />
               </p>
               <div>
-                <p className="text-fuchsia-300 font-semibold">Admin Control</p>
-                <p className="text-[14px]">
+                <p className="text-fuchsia-500 font-semibold">Admin Control</p>
+                <p className="text-[14px] text-slate-600">
                   Full administrative functionality to oversee complaint status,
                   student information, and manage service providers.
                 </p>
@@ -281,13 +281,13 @@ const Homepage = ({ token, profileDetails }) => {
       </div>
 
       {/* Section4 */}
-      <div className="bg-gray-900 rounded-sm text-white flex flex-col gap-4 justify-center mt-5 mb-10 p-5 items-center lg:flex lg:items-start lg:w-11/12">
+      <div className="bg-stone-700 rounded-sm text-white flex flex-col gap-4 justify-center mt-5 mb-10 p-5 items-center lg:flex lg:items-start lg:w-11/12">
         <div className="flex flex-col gap-4 lg:flex lg:flex-row">
           <div className="flex flex-col gap-3">
             <div className="text-4xl font-bold text-teal-500 md:text-5xl">
               Key Features
             </div>
-            <p className="w-[98%] text-gray-300 md:text-[24px]">
+            <p className="w-[98%] text-stone-100 md:text-[24px]">
               Dive deeper into the features that make Campus Voice a reliable
               and user-friendly complaint management system.
             </p>
@@ -306,8 +306,8 @@ const Homepage = ({ token, profileDetails }) => {
                 <FaFireFlameCurved />
               </p>
               <div>
-                <p className="text-fuchsia-300 font-semibold">User Reports</p>
-                <p className="text-[14px]">
+                <p className="text-fuchsia-500 font-semibold">User Reports</p>
+                <p className="text-[14px] text-stone-100">
                   Create a detailed complaint with our user-friendly reporting
                   tools and track its progress towards resolution.
                 </p>
@@ -318,8 +318,8 @@ const Homepage = ({ token, profileDetails }) => {
                 <MdWatchLater />
               </p>
               <div>
-                <p className="text-fuchsia-300 font-semibold">Admin Insight</p>
-                <p className="text-[14px]">
+                <p className="text-fuchsia-500 font-semibold">Admin Insight</p>
+                <p className="text-[14px] text-stone-100">
                   Admin Insight Administrators can easily access student info,
                   update complaint statuses, and add service providers within
                   the platform.
@@ -331,8 +331,8 @@ const Homepage = ({ token, profileDetails }) => {
                 <BsCloudyFill />
               </p>
               <div>
-                <p className="text-fuchsia-300 font-semibold">Provider Access</p>
-                <p className="text-[14px]">
+                <p className="text-fuchsia-500 font-semibold">Provider Access</p>
+                <p className="text-[14px] text-stone-100">
                   Service providers have targeted access to complaints relevant
                   to their services, allowing for efficient resolution.
                 </p>

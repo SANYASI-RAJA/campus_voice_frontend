@@ -4,7 +4,7 @@ import CountUp from "react-countup";
 const Card = ({value, text, tag}) => {
   return (
     <div>
-        <div className="border-solide border-2 border-pink-600 px-24 py-5 rounded-md text-center shadow-lg shadow-pink-500 dark:shadow-lg dark:shadow-white md:px-16 lg:px-24">
+        <div className="border-solide border-2 border-yellow-600 px-24 py-5 rounded-md text-center shadow-lg shadow-rose-400 dark:shadow-lg dark:shadow-white md:px-16 lg:px-24">
                 {/* <div className="text-4xl">{value}</div> */}
                 {tag === "percent" ?
                   <CountUp

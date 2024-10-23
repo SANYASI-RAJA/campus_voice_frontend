@@ -280,7 +280,7 @@ const Navbar = ({ setToken, setProfileDetails }) => {
         Home
       </Link>
       {isLoggedIn && profile.role === "Student" && (
-        <Link to="/contactus" className="ml-4 bg-blue-700 p-2 text-[16px] text-white font-bold rounded-md w-24 text-center">
+        <Link to="/contactus" className="ml-4 bg-blue-700 p-2 text-[16px] text-white font-bold rounded-md w-32 text-center">
           Contact Us
         </Link>
       )}
@@ -330,7 +330,7 @@ const Navbar = ({ setToken, setProfileDetails }) => {
         Home
       </Link>
       {isLoggedIn && profile.role === "Student" && (
-        <Link to="/contactus" className="bg-blue-700 p-2 text-[16px] text-white font-bold rounded-md w-24 text-center">
+        <Link to="/contactus" className="bg-blue-700 p-2 text-[16px] text-white font-bold rounded-md w-32 text-center">
           Contact Us
         </Link>
       )}
